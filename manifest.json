@@ -1,53 +1,13 @@
 {
-    "name": "FDP",
-    "description": "FDP Extension",
-    "version": "0.0.1",
-    "manifest_version": 3,
-    "permissions": [
-        "activeTab",
-        "storage",
-        "alarms",
-    ],
-    "commands": {
-        "_execute_action": {
-            "suggested_key": {
-                "windows": "Ctrl+Shift+F",
-                "mac": "Command+Shift+Z",
-                "chromeos": "Ctrl+Shift+F",
-                "linux": "Ctrl+Shift+F"
-            }
-        }
-    },
-    "background": {
-        "service_worker": "background.js"
-    },
-    "action": {
-        "default_title": "Open the popup"
-    },
-    "icons": {
-        "16": "logo-2.png",
-        "48": "logo-2.png",
-        "128": "logo-2.png"
-    },
-    "content_scripts": [
-        {
-            "matches": [
-                "*://*/*"
-            ],
-            "js": [
-                "content_script.js"
-            ]
-        }
-    ],
-    "web_accessible_resources": [
-        {
-            "resources": [
-                "Rubik-Regular.ttf",
-                "index.html"
-            ],
-            "matches": [
-                "<all_urls>"
-            ]
-        }
-    ]
+  "manifest_version": 3,
+  "name": "Fair Data Protocol - Extension",
+  "version": "0.0.1",
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "content_scripts": [{
+    "matches": ["*://github.com/parcel-bundler/*"],
+    "js": ["parcel-content-script.ts"]
+  }]
 }
