@@ -1,13 +1,8 @@
 {
-  "manifest_version": 3,
-  "name": "Fair Data Protocol - Extension",
-  "version": "0.0.1",
-  "background": {
-    "service_worker": "background.js",
-    "type": "module"
-  },
-  "content_scripts": [{
-    "matches": ["*://github.com/parcel-bundler/*"],
-    "js": ["parcel-content-script.ts"]
-  }]
+    "manifest_version": 3,
+    "name": "Fair Data Protocol - Extension",
+    "version": "0.0.1",
+    "action": {
+        "default_popup": "src/index.html"
+    }
 }
