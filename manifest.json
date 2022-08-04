@@ -4,5 +4,8 @@
     "version": "0.0.1",
     "action": {
         "default_popup": "src/index.html"
-    }
+    },
+    "permissions": [
+        "storage"
+    ]
 }
